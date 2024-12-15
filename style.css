@@ -7,7 +7,7 @@
 }
 
 html {
-    width: 100%;
+    overflow-x: hidden;
 }
 
 body {
@@ -233,8 +233,7 @@ body {
 
 .nav-container {
     display: flex;
-    width: 100%;
-    padding: 60px 50px 0 50px;
+    padding-top: 60px;
 }
 
 .nav-item {
