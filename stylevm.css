@@ -6,6 +6,9 @@
     --light-color: #FFFFFF;
 }
 
+html {
+    width: 100%;
+}
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -27,7 +30,6 @@ body {
 
         /* Navbar base styling */
         .navbar {
-            position: relative;
             background-color: var(--primary-color);
             padding: 5px 0;
             z-index: 1000;
