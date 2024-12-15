@@ -30,7 +30,7 @@ body {
 
         /* Navbar base styling */
         .navbar {
-            position: fixed;
+            position: relative;
             background-color: var(--primary-color);
             padding: 5px 0;
             z-index: 1000;
