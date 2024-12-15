@@ -68,7 +68,7 @@
                     <!-- Kotak input -->
                     <input id="searchInput" class="form-control me-2" type="text" placeholder="Cari..." aria-label="Search">
                     <!-- Tombol ikon pencarian -->
-                    <button id="searchButton" class="btn btn2-outline-light" type="button">
+                    <button id="searchButton" class="btn" type="button">
                         <i class="fas fa-search"></i>
                     </button>
                 </form>
@@ -80,15 +80,15 @@
         <!-- Header Section -->
         <header class="judul mb-5">
             <h1 class="display-5 fw-bold">
-                DOKTER <div class="title-underline"></div><span class="text-secondary fw-normal">>> Spesialis Kami</span>
+                DOKTER <span class="text-secondary fw-normal">>> Spesialis Kami</span>
             </h1>
-            
+            <div class="title-underline"></div>
         </header> 
 
-    <div class="container2 py-5">
+    <div class="doctor-container">
         <div class="row">
             <!-- Sidebar Spesialis -->
-            <div class="col-md-2">
+            <div class="col-md-3">
                 <div class="spesialis-sidebar">
                     <h2>Spesialis</h2>
                     <ul class="spesialis-list">
@@ -112,7 +112,7 @@
             </div>
 
             <!-- Daftar Dokter -->
-            <div class="col-md-7">
+            <div class="col-md-9">
                 <div class="doctors-container">
                     <div class="row" id="doctorsGrid">
                         <!-- Doctors will be inserted here by JavaScript -->
@@ -306,6 +306,5 @@ searchButton.addEventListener("click", () => {
     }
 });
     </script>
-    <script src="script.js"></script>
 </body>
 </html>
