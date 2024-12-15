@@ -6,16 +6,10 @@
     --light-color: #FFFFFF;
 }
 
-html {
-    overflow-x: hidden;
-    }
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
 }
 
 /* Top Bar */
@@ -30,7 +24,6 @@ body {
 
         /* Navbar base styling */
         .navbar {
-            position: relative;
             background-color: var(--primary-color);
             padding: 5px 0;
             z-index: 1000;
@@ -158,9 +151,10 @@ body {
             height: 3px;
             background-color: var(--primary-color);
         }
-
-        .row {
-            padding: 40px;
+        
+        .doctor-container {
+            margin: 0 20px 0 20px;
+            padding-bottom: 40px;
         }
         .spesialis-sidebar {
             background-color: var(--primary-color);
@@ -175,7 +169,7 @@ body {
         
         .spesialis-list {
             list-style: none;
-            padding: 20px;
+            padding: 0;
         }
         
         .spesialis-item {
@@ -241,3 +235,4 @@ footer {
     background: rgba(0,0,0,0.2);
     color: var(--dark-color);
 }
+
