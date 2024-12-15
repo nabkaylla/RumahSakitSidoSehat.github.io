@@ -7,7 +7,7 @@
 }
 
 html {
-    width: 100%;
+    overflow-x: hidden;
 }
 
 body {
@@ -174,7 +174,7 @@ h1 {
 }
 
 .title-underline {
-    width: 170px;
+    width: 100px;
     height: 3px;
     background-color: var(--primary-color);
 }
