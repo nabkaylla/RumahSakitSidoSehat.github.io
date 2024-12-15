@@ -160,6 +160,7 @@ h1 {
 .hover-scale:hover {
     transform: scale(1.02);
 }
+
 /* Text Animation */
 .fade-in {
     opacity: 0;
@@ -180,6 +181,7 @@ h1 {
 
 /* Text Styling */
 .lead {
+    margin-left: 120px;
     text-align: justify;
     line-height: 1.8;
     color: var(--dark-color);
@@ -188,6 +190,10 @@ h1 {
 
 .lead:hover {
     color: var(--primary-color);
+}
+
+.gambar {
+    padding-left: 60px;
 }
 
 /* Responsive Adjustments */
