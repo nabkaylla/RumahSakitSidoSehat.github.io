@@ -7,8 +7,8 @@
 }
 
 html {
-    width: 100%;
-}
+    overflow-x: hidden;
+    }
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -153,13 +153,13 @@ body {
             padding-left: 70px;
         }
         .title-underline {
-            width: 200px;
+            width: 100px;
             height: 3px;
             background-color: var(--primary-color);
         }
 
         .row {
-            margin-left: 70px;
+            padding: 40px;
         }
         .spesialis-sidebar {
             background-color: var(--primary-color);
@@ -174,7 +174,7 @@ body {
         
         .spesialis-list {
             list-style: none;
-            padding: 0;
+            padding: 20px;
         }
         
         .spesialis-item {
