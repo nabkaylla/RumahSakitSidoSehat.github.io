@@ -6,6 +6,9 @@
     --light-color: #FFFFFF;
 }
 
+html {
+    width: 100%;
+}
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -27,7 +30,6 @@ body {
 
         /* Navbar base styling */
         .navbar {
-            position: relative;
             background-color: var(--primary-color);
             padding: 5px 0;
             z-index: 1000;
@@ -151,7 +153,7 @@ body {
         }
 
         .title-underline {
-            width: 240px;
+            width: 100px;
             height: 3px;
             background-color: var(--primary-color);
             margin: 10px 0 0 70px;
@@ -286,4 +288,3 @@ footer {
     background: rgba(0,0,0,0.2);
     color: var(--dark-color);
 }
-
