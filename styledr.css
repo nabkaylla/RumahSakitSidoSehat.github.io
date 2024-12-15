@@ -1,0 +1,242 @@
+/* General Styles */
+:root {
+    --primary-color: #73A0BE;
+    --secondary-color: #5C6BC0;
+    --dark-color: #2C3E50;
+    --light-color: #FFFFFF;
+}
+
+html {
+    width: 100%;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Top Bar */
+.top-bar {
+    background-color: var(--primary-color);
+    border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+.top-bar small {
+    color: var(--light-color);
+}
+
+        /* Navbar base styling */
+        .navbar {
+            background-color: var(--primary-color);
+            padding: 5px 0;
+            z-index: 1000;
+            border-bottom-right-radius: 30px;
+            border-bottom-left-radius: 30px;
+        }
+
+        /* Nav link styling */
+        .nav-link {
+            color: white !important;
+            font-weight: 500;
+            padding: 10px 16px !important;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            border-radius: 30px;
+        }
+
+        .nav-link:hover, .nav-link:focus {
+            background-color: var(--dark-color);
+            color: rgba(255, 255, 255, 0.9) !important;
+            border-radius: 30px;
+        }
+
+        /* Dropdown container positioning */
+        .nav-item2.dropdown {
+            position: relative;
+        }
+
+        /* Dropdown menu styling */
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            z-index: 999;
+            background-color: var(--primary-color);
+            border: none;
+            border-radius: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 0;
+            margin-top: 0 !important;
+            min-width: 160px;
+            overflow: hidden;
+        }
+
+        /* Show dropdown on hover */
+        .nav-item2.dropdown:hover .dropdown-menu {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+
+        /* Dropdown items styling */
+        .dropdown-item {
+            padding: 10px 24px;
+            color: var(--dark-color);
+            transition: background-color 0.3s ease;
+            background-color: var(--light-color);
+        }
+
+        .dropdown-item:hover, .dropdown-item:focus {
+            color: var(--light-color);
+            background-color: var(--dark-color);
+        }
+
+        /* Animation for dropdown */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Style for active nav item */
+        .nav-item2 .nav-link.active {
+            background-color: var(--dark-color);
+            border-radius: 30px;
+        }
+
+        /* Search button styling */
+        .btn-outline-light {
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-outline-light:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Dropdown arrow styling */
+        .dropdown-toggle::after {
+            vertical-align: middle;
+            border-top: 0.3em solid rgba(255, 255, 255, 0.7);
+        }
+
+        /* Remove dropdown arrow spacing */
+        .nav-link.dropdown-toggle {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-link.dropdown-toggle::after {
+            margin-left: 0.5em;
+        }
+
+        /* Logo styling */
+        .navbar-brand img {
+            height: 50px;
+            width: auto;
+        }
+
+        .judul {
+            padding-top: 50px;
+            padding-left: 70px;
+        }
+        .title-underline {
+            width: 200px;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+
+        .row {
+            margin-left: 70px;
+        }
+        .spesialis-sidebar {
+            background-color: var(--primary-color);
+            border-radius: 10px;
+            padding: 20px;
+        }
+        
+        .spesialis-sidebar h2 {
+            color: white;
+            margin-bottom: 15px;
+        }
+        
+        .spesialis-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .spesialis-item {
+            background-color: white;
+            margin-bottom: 5px;
+            padding: 8px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        
+        .spesialis-item:hover {
+            background-color: #e9ecef;
+        }
+        
+        .doctor-card {
+            background-color: white;
+            border-radius: 50%;
+            padding: 10px;
+            text-align: center;
+            margin-bottom: 20px;
+            transition: transform 0.3s;
+        }
+        
+        .doctor-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .doctor-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        
+        .doctor-info {
+            text-align: center;
+        }
+        
+        .doctor-name {
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        
+        .doctor-speciality {
+            font-size: 12px;
+            color: #666;
+        }
+        
+        .doctors-container {
+            background-color: var(--primary-color);
+            border-radius: 10px;
+            padding: 20px;
+            margin-left: 0px;
+        }
+
+/* Footer */
+footer {
+    background-color: var(--dark-color);
+}
+
+.copyright {
+    background: rgba(0,0,0,0.2);
+    color: var(--dark-color);
+}

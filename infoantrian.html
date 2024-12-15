@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info Antrian - Rumah Sakit Sido Sehat</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="styleia.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar py-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <small><i class="fas fa-phone me-2"></i>(0271) 070-070</small>
+                    <small class="ms-3"><i class="fas fa-envelope me-2"></i>humas@rsidosehat.co.id</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="LogoSidoWaras.png" alt="Sido Sehat Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item2">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item2 dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Profil
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="tentangkami.html">Tentang Kami</a></li>
+                            <li><a class="dropdown-item" href="visimisi.html">Visi & Misi</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item2">
+                        <a class="nav-link" href="dokter.html">Dokter</a>
+                    </li>
+                    <li class="nav-item2">
+                        <a class="nav-link" href="layanan.html">Layanan</a>
+                    </li>
+                    <li class="nav-item2 dropdown">
+                        <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Informasi
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="berita.html">Berita & Artikel</a></li>
+                            <li><a class="dropdown-item" href="sosmed.html">Sosial Media</a></li>
+                            <li><a class="dropdown-item" href="infoantrian.html">Info Antrian</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex ms-3">
+                    <button id="searchButton" class="btn btn-outline-light" type="button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid min-vh-100 d-flex flex-column align-items-center bg-light py-4">
+        <div class="queue-checker mb-4">
+            <!-- Header Section -->
+            <div class="header-section text-center mb-4">
+                <h1 class="title">Lihat Antrian Langsung</h1>
+                <p class="subtitle">
+                    Cek antrian yang sedang berjalan di Rumah Sakit Sido Sehat dengan lebih mudah.
+                </p>
+            </div>
+
+            <!-- Form Section -->
+            <div class="form-container">
+                <form id="queueForm">
+                    <div class="mb-4">
+                        <label for="queueType" class="form-label">
+                            Jenis Antrian<span class="text-danger">*</span>
+                        </label>
+                        <select class="form-select" id="queueType" required>
+                            <option value="" selected disabled>-- Pilih Antrean --</option>
+                            <option value="all">Semua Poli</option>
+                            <option value="kebidanan">Poli Kebidanan & Kandungan</option>
+                            <option value="tht">Poli THT</option>
+                            <option value="dalam">Poli Penyakit Dalam</option>
+                            <option value="orthopedi">Poli Orthopedi</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Cari</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Queue Status Cards -->
+        <div id="queueStatus" class="queue-status container px-3 d-none">
+            <div class="row g-4">
+                <!-- Kebidanan Card -->
+                <div class="col-12" data-queue-type="kebidanan">
+                    <div class="card queue-card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <div>
+                                    <h5 class="card-subtitle text-muted mb-1">POLI KEBIDANAN & KANDUNGAN</h5>
+                                    <h4 class="card-title">dr. H. ADI PRAMONO,Sp.OG.(K)</h4>
+                                </div>
+                                <div class="queue-number">000/002</div>
+                            </div>
+                            <div class="queue-status-indicator">
+                                <span class="status-dot"></span>
+                                Antrian Sudah Dimulai
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- THT Card -->
+                <div class="col-12" data-queue-type="tht">
+                    <div class="card queue-card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <div>
+                                    <h5 class="card-subtitle text-muted mb-1">POLI THT</h5>
+                                    <h4 class="card-title">dr. H. SUDARMAWAN, Sp.THT</h4>
+                                </div>
+                                <div class="queue-number">007/007</div>
+                            </div>
+                            <div class="queue-status-indicator">
+                                <span class="status-dot"></span>
+                                Antrian Sudah Dimulai
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Penyakit Dalam Card -->
+                <div class="col-12" data-queue-type="dalam">
+                    <div class="card queue-card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <div>
+                                    <h5 class="card-subtitle text-muted mb-1">POLI PENYAKIT DALAM</h5>
+                                    <h4 class="card-title">dr. HARDI SURYA ATMADJA, Sp.PD</h4>
+                                </div>
+                                <div class="queue-number">000/005</div>
+                            </div>
+                            <div class="queue-status-indicator">
+                                <span class="status-dot"></span>
+                                Antrian Sudah Dimulai
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Orthopedi Card -->
+                <div class="col-12" data-queue-type="orthopedi">
+                    <div class="card queue-card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <div>
+                                    <h5 class="card-subtitle text-muted mb-1">POLI ORTHOPEDI</h5>
+                                    <h4 class="card-title">dr. IGB.RENO RANUH, Sp.OT</h4>
+                                </div>
+                                <div class="queue-number">000/002</div>
+                            </div>
+                            <div class="queue-status-indicator">
+                                <span class="status-dot"></span>
+                                Antrian Sudah Dimulai
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5>Rumah Sakit Sido Sehat</h5>
+                    <p>Memberikan pelayanan kesehatan terbaik untuk masyarakat.</p>
+                    <div class="social-links mt-3">
+                        <a href="#" class="text-light me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-light"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5>Kontak</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-map-marker-alt me-2"></i>Jl. Rumah Sakit No. 123</li>
+                        <li><i class="fas fa-phone me-2"></i>(0271) 070-070</li>
+                        <li><i class="fas fa-envelope me-2"></i>humas@rsidosehat.co.id</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Jam Operasional</h5>
+                    <ul class="list-unstyled">
+                        <li>Senin - Jumat: 08:00 - 20:00</li>
+                        <li>Sabtu: 09:00 - 17:00</li>
+                        <li>Minggu: 09:00 - 15:00</li>
+                        <li>Unit Gawat Darurat: 24 Jam</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Copyright -->
+    <div class="copyright bg-darker py-3">
+        <div class="container text-center">
+            <small>&copy; 2024 Rumah Sakit Sido Sehat. All rights reserved.</small>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+        
+        document.addEventListener('DOMContentLoaded', function() {
+        const form = document.getElementById('queueForm');
+        const queueStatus = document.getElementById('queueStatus');
+        
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const queueType = document.getElementById('queueType').value;
+            
+            if (!queueType) {
+                alert('Silakan pilih jenis antrian terlebih dahulu');
+                return;
+            }
+            
+            // Show the queue status section
+            queueStatus.classList.remove('d-none');
+            
+            // Add a small delay before adding the 'show' class for the transition effect
+            setTimeout(() => {
+                queueStatus.classList.add('show');
+            }, 50);
+            
+            // Smooth scroll to queue status
+            queueStatus.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            
+            // Filter cards based on selection
+            const cards = document.querySelectorAll('.queue-status .col-12');
+            cards.forEach(card => {
+                if (queueType === 'all') {
+                    card.style.display = 'block';
+                } else {
+                    const cardType = card.getAttribute('data-queue-type');
+                    card.style.display = cardType === queueType ? 'block' : 'none';
+                }
+            });
+        });
+    });
+    </script>
+</body>
+</html>

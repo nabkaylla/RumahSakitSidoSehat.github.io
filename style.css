@@ -1,0 +1,538 @@
+/* General Styles */
+:root {
+    --primary-color: #73A0BE;
+    --secondary-color: #5C6BC0;
+    --dark-color: #2C3E50;
+    --light-color: #FFFFFF;
+}
+
+html {
+    width: 100%;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Top Bar */
+.top-bar {
+    background-color: var(--primary-color);
+    border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+.top-bar small {
+    color: var(--light-color);
+}
+
+        /* Navbar base styling */
+        .navbar {
+            background-color: var(--primary-color);
+            padding: 5px 0;
+            z-index: 1000;
+            border-bottom-right-radius: 30px;
+            border-bottom-left-radius: 30px;
+        }
+
+        /* Nav link styling */
+        .nav-link {
+            color: white !important;
+            font-weight: 500;
+            padding: 10px 16px !important;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            border-radius: 30px;
+        }
+
+        .nav-link:hover, .nav-link:focus {
+            background-color: var(--dark-color);
+            color: rgba(255, 255, 255, 0.9) !important;
+            border-radius: 30px;
+        }
+
+        /* Dropdown container positioning */
+        .nav-item2.dropdown {
+            position: relative;
+        }
+
+        /* Dropdown menu styling */
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            z-index: 999;
+            background-color: var(--primary-color);
+            border: none;
+            border-radius: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 0;
+            margin-top: 0 !important;
+            min-width: 160px;
+            overflow: hidden;
+        }
+
+        /* Show dropdown on hover */
+        .nav-item2.dropdown:hover .dropdown-menu {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+
+        /* Dropdown items styling */
+        .dropdown-item {
+            padding: 10px 24px;
+            color: var(--dark-color);
+            transition: background-color 0.3s ease;
+            background-color: var(--light-color);
+        }
+
+        .dropdown-item:hover, .dropdown-item:focus {
+            color: var(--light-color);
+            background-color: var(--dark-color);
+        }
+
+        /* Animation for dropdown */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Style for active nav item */
+        .nav-item2 .nav-link.active {
+            background-color: var(--dark-color);
+            border-radius: 30px;
+        }
+
+        /* Search button styling */
+        .btn-outline-light {
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-outline-light:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Dropdown arrow styling */
+        .dropdown-toggle::after {
+            vertical-align: middle;
+            border-top: 0.3em solid rgba(255, 255, 255, 0.7);
+        }
+
+        /* Remove dropdown arrow spacing */
+        .nav-link.dropdown-toggle {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-link.dropdown-toggle::after {
+            margin-left: 0.5em;
+        }
+
+        /* Logo styling */
+        .navbar-brand img {
+            height: 50px;
+            width: auto;
+        }
+
+/* Hero Section */
+.carousel-item {
+    height: 80vh;
+    position: relative;
+}
+
+.carousel-item img {
+    margin-top: 20px;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-overlay {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.carousel-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.action-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.action-button {
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    padding: 10px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.action-button:hover {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+}
+
+.carousel-indicators {
+    margin-bottom: 1rem;
+}
+
+.carousel-indicators button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+@media (max-width: 768px) {
+    .carousel-title {
+        font-size: 3rem;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+    }
+}
+
+.nav-container {
+    display: flex;
+    width: 100%;
+    padding: 60px 50px 0 50px;
+}
+
+.nav-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.nav-item:first-child {
+    background-color: var(--primary-color);
+    border-bottom-left-radius: 30px;
+    border-top-left-radius: 30px;
+}
+
+.nav-item:first-child:hover {
+    background-color: var(--dark-color);
+}
+
+.nav-item:not(:first-child) {
+    background-color: var(--primary-color);
+}
+
+.nav-item:not(:first-child):hover {
+    background-color: var(--dark-color);
+}
+
+.nav-item:last-child {
+    border-left: 1px solid var(--primary-color);
+    border-bottom-right-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+.icon-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    transition: transform 0.3s;
+}
+
+.nav-item:hover .icon-circle {
+    transform: scale(1.1);
+}
+
+.icon-circle img {
+    width: 60px;
+    height: 60px;
+}
+
+.nav-text {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--light-color);
+}
+
+/* About Section */
+.about-section h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.title-underline {
+    width: 80px;
+    height: 3px;
+    background-color: var(--primary-color);
+    margin: 20px auto 20px;
+}
+.about-text {
+    margin: 30px 40px 0 90px;
+    color: #555;
+    text-align: justify;
+    line-height: 1.6;
+}
+.about-image {
+    margin: 30px 0 0 0px;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.statistics-section {
+    background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.9)),
+                url('tangan.png') center/cover no-repeat;
+    color: white;
+    padding: 25px 0 10px 30px;
+}
+.statistic-item {
+    text-align: center;
+    font-size: 20px;
+}
+.statistic-item i {
+    font-size: 40px;
+}
+.statistic-item .counter {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.section-title {
+    text-align: center;
+    position: relative;
+}
+
+.card {
+    margin-top: 30px;
+}
+
+.btn {
+    border-radius: 40px;
+    background-color: var(--dark-color);
+    color: white;
+}
+
+.btn:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.service-title {
+    text-align: center;
+    position: relative;
+    font-weight: 500;
+}
+
+.services-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 40px 0 100px 0;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    background-color: white;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}
+
+.services-container::-webkit-scrollbar {
+    display: none;
+}
+.service-circle img {
+    width: 50%;
+    height: 50%;
+}
+
+.services-wrapper {
+    display: inline-flex;
+    transition: transform 0.3s ease;
+}
+
+.service-item {
+    flex: 0 0 3%;
+    text-align: center;
+    padding: 0;
+    transition: all 0.3s ease;
+}
+
+.service-circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 0 auto 8px;
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.service-circle.active {
+    background-color: var(--dark-color);
+    transform: scale(1.2);
+}
+
+.service-name {
+    font-size: 18px;
+    color: var(--dark-color);
+    margin-top: 20px;
+    white-space: nowrap;
+}
+
+.service-item.center .service-circle {
+    background-color: #4682B4;
+    transform: scale(1.2);
+}
+
+/* Styling peta */
+.map-container {
+    width: 100%;
+    max-width:1400px; /* Lebar maksimum */
+    height: 350px; /* Tinggi peta */
+    margin:auto;
+    border: 1px solid #ddd; /* Garis pembatas */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3); /* Efek bayangan */
+    margin-bottom: 30px;
+}
+/* Footer */
+footer {
+    background-color: var(--dark-color);
+}
+
+.copyright {
+    background: rgba(0,0,0,0.2);
+    color: var(--dark-color);
+}
+
+/* Responsive Design */
+@media (max-width: 100%) {
+    .carousel-item {
+        height: 60vh;
+    }
+
+    .carousel-caption {
+        padding: 1rem;
+    }
+
+    .carousel-caption h1 {
+        font-size: 2rem;
+    }
+
+    .carousel-caption h2 {
+        font-size: 1.5rem;
+    }
+
+    .quick-link-item {
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 100%) {
+    .carousel-item {
+        height: 50vh;
+    }
+
+    .carousel-caption {
+        width: 90%;
+    }
+
+    .btn-lg {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+    }
+}
+
+/* Statistics Section */
+.stats-section {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+}
+
+.stats-item {
+    padding: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.stats-item:hover {
+    transform: translateY(-5px);
+}
+
+.counter {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 1rem 0;
+}
+
+/* News Section */
+.news-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.news-card img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.fade-in {
+    opacity: 0; /* Elemen awal transparan */
+    transform: translateY(30px); /* Bergeser ke bawah */
+    transition: opacity 1s ease-out, transform 1s ease-out; /* Efek transisi */
+}
+
+.fade-in.visible {
+    opacity: 1; /* Muncul */
+    transform: translateY(0); /* Kembali ke posisi semula */
+}
