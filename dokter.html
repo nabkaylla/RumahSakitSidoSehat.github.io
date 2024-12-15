@@ -68,7 +68,7 @@
                     <!-- Kotak input -->
                     <input id="searchInput" class="form-control me-2" type="text" placeholder="Cari..." aria-label="Search">
                     <!-- Tombol ikon pencarian -->
-                    <button id="searchButton" class="btn btn-outline-light" type="button">
+                    <button id="searchButton" class="btn btn2-outline-light" type="button">
                         <i class="fas fa-search"></i>
                     </button>
                 </form>
@@ -80,9 +80,9 @@
         <!-- Header Section -->
         <header class="judul mb-5">
             <h1 class="display-5 fw-bold">
-                DOKTER <span class="text-secondary fw-normal">>> Spesialis Kami</span>
+                DOKTER <div class="title-underline"></div><span class="text-secondary fw-normal">>> Spesialis Kami</span>
             </h1>
-            <div class="title-underline"></div>
+            
         </header> 
 
     <div class="container2 py-5">
@@ -112,7 +112,7 @@
             </div>
 
             <!-- Daftar Dokter -->
-            <div class="col-md-9">
+            <div class="col-md-7">
                 <div class="doctors-container">
                     <div class="row" id="doctorsGrid">
                         <!-- Doctors will be inserted here by JavaScript -->
@@ -295,6 +295,17 @@
 
         // Initial display of all doctors
         displayDoctors();
+        // Event klik pada tombol
+searchButton.addEventListener("click", () => {
+    // Toggle visibilitas kotak input
+    if (searchInput.style.display === "none" || searchInput.style.display === "") {
+        searchInput.style.display = "block"; // Tampilkan input
+        searchInput.focus(); // Fokus ke kotak input
+    } else {
+        searchInput.style.display = "none"; // Sembunyikan input
+    }
+});
     </script>
+    <script src="script.js"></script>
 </body>
 </html>
