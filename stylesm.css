@@ -6,9 +6,6 @@
     --light-color: #FFFFFF;
 }
 
-html {
-    width: 100%;
-}
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -153,7 +150,7 @@ body {
         }
 
         .title-underline {
-            width: 270px;
+            width: 100px;
             height: 3px;
             background-color: var(--primary-color);
         }
@@ -247,3 +244,4 @@ footer {
     background: rgba(0,0,0,0.2);
     color: var(--dark-color);
 }
+
